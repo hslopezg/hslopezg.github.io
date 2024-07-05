@@ -912,7 +912,7 @@ header a {
     }
 
     #bases {
-        padding-top: 6%; /* Aumentar espacio superior en pantallas pequeñas */
+        padding-top: 6rem; /* Aumentar espacio superior en pantallas pequeñas */
     }
 
     #descripcion {
