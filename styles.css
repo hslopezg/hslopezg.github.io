@@ -1,0 +1,1493 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    color: #f2f5f7;
+    font-family: 'Barlow Condensed', sans-serif; /* Aplicar la fuente Barlow Condensed */
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    overflow-x: hidden;
+}
+
+/* Estilo para el nav */
+nav {
+    height: 4.0rem;
+    width: 100vw;
+    background-color: #131418;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    position: fixed;
+    z-index: 10;
+}
+
+/* Estilo para el logo */
+.logo {
+    padding: 1vh 1vw;
+    text-align: center;
+}
+.logo img {
+    height: 5rem;
+    width: 5rem;
+}
+.logo span {
+    color: #ff414d; /* Mismo color que el botón */
+}
+
+/* Estilo para los enlaces de navegación */
+.nav-links {
+    display: flex;
+    list-style: none;
+    width: 100vw;
+    padding: 0 0.0vw;
+    justify-content: space-evenly;
+    align-items: center;
+    text-transform: uppercase;
+}
+.nav-links li a {
+    text-decoration: none;
+    margin: 0 0.0vw;
+}
+.nav-links li a:hover {
+    color: #ff414d;
+}
+.nav-links li {
+    position: relative;
+}
+.nav-links li a:hover::before {
+    width: 80%;
+}
+
+/* Estilo para el icono de hamburguesa */
+.hamburger div {
+    width: 30px;
+    height: 3px;
+    background: #f2f5f7;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+.hamburger {
+    display: none;
+}
+
+/* Animación para el icono de hamburguesa */
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+    transition: all 0.7s ease;
+    width: 0;
+}
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Estilos para la sección de parallax */
+.parallax {
+    position: relative;
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.parallax-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Estilo para la sección de inicio */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    background-image: url('https://us.as.com/autos/wp-content/uploads/2024/01/Hennessey-GOLIATH-650-Black-GMC-Sierra-1-1264x734.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+}
+
+.hero-text {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ff414d; /* Mismo color que el botón */
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 1rem; /* Tamaño de texto aumentado */
+    background: #ff414d;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.cta-button i {
+    margin-left: 10px; /* Espacio entre el texto y el icono */
+}
+
+
+.cta-button:hover {
+    background: #ff6f61;
+}
+
+/* Estilo para la sección de bases */
+#bases {
+    background-color: #ffffff; /* Fondo completamente blanco */
+    background-image: none; /* Eliminar imagen de fondo */
+    padding-top: 4rem; /* Agregar espacio superior */
+}
+
+/* Estilo para la cuadrícula de las bases */
+.bases-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; /* Espacio entre los elementos */
+    justify-items: center; /* Centramos los elementos horizontalmente */
+    align-items: center; /* Centramos los elementos verticalmente */
+    padding: 20px; /* Espacio interno para la cuadrícula */
+}
+
+/* Estilo para las tarjetas */
+.base-item {
+    background: transparent; /* Fondo totalmente transparente */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espacio interno */
+    text-align: center; /* Centrar texto */
+    box-shadow: none; /* Sin sombra */
+    transition: all 0.3s ease; /* Transición suave */
+}
+
+/* Efecto hover para las tarjetas */
+.base-item:hover {
+    transform: translateY(-5px); /* Ligero movimiento hacia arriba */
+}
+
+.base-item h3 {
+    font-size: 1.75rem; /* Tamaño del título aumentado */
+    color: #000000; /* Color del título negro */
+    margin-bottom: 10px; /* Espacio debajo del título */
+}
+
+.base-item p {
+    font-size: 1.25rem; /* Tamaño del texto aumentado */
+    color: #000000; /* Color del texto negro */
+}
+
+/* Estilo para los textos generales de la sección de bases */
+#bases h2, #bases p {
+    color: #000000; /* Color del texto negro */
+    font-size: 1.5rem; /* Aumento del tamaño de la letra */
+}
+
+/* Estilo para la imagen en la sección de bases */
+.bases-image {
+    display: flex;
+    justify-content: center; /* Centrar la imagen horizontalmente */
+    margin-top: 20px; /* Espacio superior */
+}
+
+.bases-image img {
+    width: 50rem; /* Ancho especificado */
+    height: 17rem; /* Alto igual que las tarjetas */
+    object-fit: cover; /* Asegurar que la imagen cubra el área sin distorsión */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Estilo para la sección de producto */
+#descripcion {
+    background-color: black;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    padding-top: 2rem; /* Reducir espacio superior */
+    padding-bottom: 0rem; /* Reducir espacio inferior */
+    color: #ffffff; /* Texto blanco para contraste */
+}
+
+/* Estilo para el fondo oscuro al ampliar */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+}
+
+/* Estilos para el carrusel */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body {
+    margin: 0;
+    background-color: #000;
+    color: #eee;
+    font-family: Poppins;
+    font-size: 12px;
+}
+a {
+    text-decoration: none;
+}
+header {
+    width: 1140px;
+    max-width: 80%;
+    margin: auto;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+}
+header a {
+    color: #eee;
+    margin-right: 40px;
+}
+/* Estilos para el carrusel */
+.carousel {
+    height: 100vh;
+    margin-top: -50px;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+.carousel .list .item {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0 0 0 0;
+}
+.carousel .list .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.carousel .list .item .content {
+    position: absolute;
+    top: 50%;
+    width: 1140px;
+    max-width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-right: 30%;
+    box-sizing: border-box;
+    color: #fff;
+    text-shadow: 0 5px 10px #0004;
+}
+.carousel .list .item .author {
+    font-weight: bold;
+    letter-spacing: 10px;
+}
+.carousel .list .item .title,
+.carousel .list .item .topic {
+    font-size: 5em;
+    font-weight: bold;
+    line-height: 1.3em;
+}
+.carousel .list .item .topic {
+    color: #ff414d;
+}
+.carousel .list .item .buttons {
+    margin-top: 20px;
+    text-align: center; /* Centrando el contenedor de botones */
+}
+.carousel .list .item .buttons button {
+    border: none;
+    background-color: #eee;
+    letter-spacing: 3px;
+    font-family: Poppins, sans-serif;
+    font-weight: 500;
+}
+.carousel .list .item .buttons button:nth-child(2) {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #eee;
+}
+/* Estilos para las miniaturas */
+.thumbnail {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: max-content;
+    z-index: 100;
+    display: flex;
+    gap: 20px;
+}
+.thumbnail .item {
+    width: 150px;
+    height: 220px;
+    flex-shrink: 0;
+    position: relative;
+}
+.thumbnail .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.thumbnail .item .content {
+    color: #fff;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+}
+.thumbnail .item .content .title {
+    font-weight: 500;
+}
+.thumbnail .item .content .description {
+    font-weight: 300;
+}
+/* Flechas */
+.arrows {
+    position: absolute;
+    top: 80%;
+    right: 52%;
+    z-index: 100;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.arrows button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #eee4;
+    border: none;
+    color: #fff;
+    font-family: monospace;
+    font-weight: bold;
+    transition: .5s;
+}
+.arrows button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Animación */
+.carousel .list .item:nth-child(1) {
+    z-index: 1;
+}
+.carousel .list .item:nth-child(1) .content .author,
+.carousel .list .item:nth-child(1) .content .title,
+.carousel .list .item:nth-child(1) .content .topic,
+.carousel .list .item:nth-child(1) .content .des,
+.carousel .list .item:nth-child(1) .content .buttons {
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent .5s 1s linear 1 forwards;
+}
+@keyframes showContent {
+    to {
+        transform: translateY(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+.carousel .list .item:nth-child(1) .content .title {
+    animation-delay: 1.2s!important;
+}
+.carousel .list .item:nth-child(1) .content .topic {
+    animation-delay: 1.4s!important;
+}
+.carousel .list .item:nth-child(1) .content .des {
+    animation-delay: 1.6s!important;
+}
+.carousel .list .item:nth-child(1) .content .buttons {
+    animation-delay: 1.8s!important;
+}
+/* Animación para el siguiente clic */
+.carousel.next .list .item:nth-child(1) img {
+    width: 150px;
+    height: 220px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    border-radius: 30px;
+    animation: showImage .5s linear 1 forwards;
+}
+@keyframes showImage {
+    to {
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
+
+.carousel.next .thumbnail .item:nth-last-child(1) {
+    overflow: hidden;
+    animation: showThumbnail .5s linear 1 forwards;
+}
+.carousel.prev .list .item img {
+    z-index: 100;
+}
+@keyframes showThumbnail {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+}
+.carousel.next .thumbnail {
+    animation: effectNext .5s linear 1 forwards;
+}
+@keyframes effectNext {
+    from {
+        transform: translateX(150px);
+    }
+}
+
+/* Tiempo de ejecución */
+.carousel .time {
+    position: absolute;
+    z-index: 1000;
+    width: 0%;
+    height: 3px;
+    background-color: #f1683a;
+    left: 0;
+    top: 0;
+}
+.carousel.next .time,
+.carousel.prev .time {
+    animation: runningTime 3s linear 1 forwards;
+}
+@keyframes runningTime {
+    from { width: 100% }
+    to { width: 0 }
+}
+
+/* Clic anterior */
+.carousel.prev .list .item:nth-child(2) {
+    z-index: 2;
+}
+.carousel.prev .list .item:nth-child(2) img {
+    animation: outFrame 0.5s linear 1 forwards;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+@keyframes outFrame {
+    to {
+        width: 150px;
+        height: 220px;
+        bottom: 50px;
+        left: 50%;
+        border-radius: 20px;
+    }
+}
+.carousel.prev .thumbnail .item:nth-child(1) {
+    overflow: hidden;
+    opacity: 0;
+    animation: showThumbnail .5s linear 1 forwards;
+}
+.carousel.next .arrows button,
+.carousel.prev .arrows button {
+    pointer-events: none;
+}
+.carousel.prev .list .item:nth-child(2) .content .author,
+.carousel.prev .list .item:nth-child(2) .content .title,
+.carousel.prev .list .item:nth-child(2) .content .topic,
+.carousel.prev .list .item:nth-child(2) .content .des,
+.carousel.prev .list .item:nth-child(2) .content .buttons {
+    animation: contentOut 1.5s linear 1 forwards!important;
+}
+@keyframes contentOut {
+    to {
+        transform: translateY(-150px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+}
+
+/* Estilos para el botón transparente */
+.transparent-btn {
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #ff414d;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: Poppins, sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: block;
+    margin: 20px auto; /* Centrando el botón */
+}
+
+.transparent-btn:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Media Queries */
+
+/* Para pantallas menores a 1050px */
+@media screen and (max-width: 1050px) {
+    nav {
+        position: fixed;
+        z-index: 3;
+    }
+    .hamburger {
+        display: block;
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        z-index: 2;
+        transition: all 0.7s ease;
+    }
+    .nav-links {
+        position: fixed;
+        background: #131418;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        clip-path: circle(50px at 90% -20%);
+        -webkit-clip-path: circle(50px at 90% -10%);
+        transition: all 1s ease-out;
+        pointer-events: none;
+        font-size: 2rem;
+    }
+    .nav-links.open {
+        clip-path: circle(1300px at 90% -0.1%);
+        -webkit-clip-path: circle(1300px at 90% -0.1%);
+        pointer-events: all;
+    }
+    .nav-links li {
+        opacity: 0;
+    }
+    .nav-links li:nth-child(1) {
+        transition: all 0.5s ease 0.2s;
+    }
+    .nav-links li:nth-child(2) {
+        transition: all 0.5s ease 0.4s;
+    }
+    .nav-links li:nth-child(3) {
+        transition: all 0.5s ease 0.6s;
+    }
+    .nav-links li:nth-child(4) {
+        transition: all 0.5s ease 0.7s;
+    }
+    .nav-links li:nth-child(5) {
+        transition: all 0.5s ease 0.8s;
+    }
+    .nav-links li:nth-child(6) {
+        transition: all 0.5s ease 0.9s;
+        margin: 0;
+    }
+    .nav-links li:nth-child(7) {
+        transition: all 0.5s ease 1s;
+        margin: 0;
+    }
+    li.fade {
+        opacity: 1;
+    }
+
+    .bases-grid {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+
+    #bases h2, #bases p {
+        font-size: 2rem; /* Tamaño de letra reducido en pantallas pequeñas */
+    }
+
+    .base-item h3 {
+        font-size: 1.75rem; /* Tamaño del título reducido */
+    }
+
+    .base-item p {
+        font-size: 1.5rem; /* Tamaño del texto reducido */
+    }
+
+    .bases-image img {
+        width: 100%; /* Ancho total en pantallas pequeñas */
+        height: auto; /* Altura automática */
+    }
+
+    #bases {
+        padding-top: 4rem; /* Aumentar espacio superior en pantallas pequeñas */
+    }
+
+    #descripcion {
+        padding-top: 4rem; /* Aumentar espacio superior en pantallas pequeñas */
+    }
+
+    .cta-button {
+        font-size: 1.2rem; /* Tamaño de texto reducido */
+        padding: 12px 25px;
+    }
+
+    .carousel .list .item .content {
+        top: 50%;
+        left: 38%;
+    }
+
+    .cta-button {
+        font-size: 1.2rem; /* Tamaño de texto reducido */
+        padding: 12px 25px;
+    }
+
+    #mapa
+    {
+        width: 90%;
+    }
+
+    #ubicacion{
+        padding-top: 4rem;
+        padding-bottom: 14rem;
+        font-size: 1.5rem;
+    }
+
+    #contacto{
+        font-size: 1.5rem;
+    }
+}
+
+/* Para pantallas menores a 900px */
+@media screen and (max-width: 900px) {
+    nav {
+        position: fixed;
+        z-index: 3;
+    }
+    .hamburger {
+        display: block;
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        z-index: 2;
+        transition: all 0.7s ease;
+    }
+    .nav-links {
+        position: fixed;
+        background: #131418;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        clip-path: circle(50px at 90% -20%);
+        -webkit-clip-path: circle(50px at 90% -10%);
+        transition: all 1s ease-out;
+        pointer-events: none;
+        font-size: 2rem;
+    }
+    .nav-links.open {
+        clip-path: circle(1100px at 90% -0.1%);
+        -webkit-clip-path: circle(1100px at 90% -0.1%);
+        pointer-events: all;
+    }
+    .nav-links li {
+        opacity: 0;
+    }
+    .nav-links li:nth-child(1) {
+        transition: all 0.5s ease 0.2s;
+    }
+    .nav-links li:nth-child(2) {
+        transition: all 0.5s ease 0.4s;
+    }
+    .nav-links li:nth-child(3) {
+        transition: all 0.5s ease 0.6s;
+    }
+    .nav-links li:nth-child(4) {
+        transition: all 0.5s ease 0.7s;
+    }
+    .nav-links li:nth-child(5) {
+        transition: all 0.5s ease 0.8s;
+    }
+    .nav-links li:nth-child(6) {
+        transition: all 0.5s ease 0.9s;
+        margin: 0;
+    }
+    .nav-links li:nth-child(7) {
+        transition: all 0.5s ease 1s;
+        margin: 0;
+    }
+    li.fade {
+        opacity: 1;
+    }
+
+    .bases-grid {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+
+    #bases h2, #bases p {
+        font-size: 1.75rem; /* Tamaño de letra reducido en pantallas pequeñas */
+    }
+
+    .base-item h3 {
+        font-size: 1.5rem; /* Tamaño del título reducido */
+    }
+
+    .base-item p {
+        font-size: 1rem; /* Tamaño del texto reducido */
+    }
+
+    .bases-image img {
+        width: 100%; /* Ancho total en pantallas pequeñas */
+        height: auto; /* Altura automática */
+    }
+
+    #bases {
+        padding-top: 4rem; /* Aumentar espacio superior en pantallas pequeñas */
+    }
+
+    #descripcion {
+        padding-top: 4rem; /* Aumentar espacio superior en pantallas pequeñas */
+    }
+
+    .cta-button {
+        font-size: 1.2rem; /* Tamaño de texto reducido */
+        padding: 12px 25px;
+    }
+
+    .carousel .list .item .content {
+        top: 50%;
+        left: 38%;
+    }
+
+    .cta-button {
+        font-size: 1.2rem; /* Tamaño de texto reducido */
+        padding: 12px 25px;
+    }
+
+    #mapa
+    {
+        width: 90%;
+        max-height: 80%;
+    }
+
+    #ubicacion{
+        padding-bottom: 6rem;
+        font-size: 1.5rem;
+    }
+
+    #contacto{
+        font-size: 1.5rem;
+    }
+}
+
+/* Para pantallas menores a 800px */
+@media screen and (max-width: 800px) {
+    nav {
+        position: fixed;
+        z-index: 3;
+    }
+    .hamburger {
+        display: block;
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        z-index: 2;
+        transition: all 0.7s ease;
+    }
+    .nav-links {
+        position: fixed;
+        background: #131418;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        clip-path: circle(50px at 90% -20%);
+        -webkit-clip-path: circle(50px at 90% -10%);
+        transition: all 1s ease-out;
+        pointer-events: none;
+    }
+    .nav-links.open {
+        clip-path: circle(1000px at 90% -5%);
+        -webkit-clip-path: circle(1000px at 90% -5%);
+        pointer-events: all;
+    }
+    .nav-links li {
+        opacity: 0;
+    }
+    .nav-links li:nth-child(1) {
+        transition: all 0.5s ease 0.2s;
+    }
+    .nav-links li:nth-child(2) {
+        transition: all 0.5s ease 0.4s;
+    }
+    .nav-links li:nth-child(3) {
+        transition: all 0.5s ease 0.6s;
+    }
+    .nav-links li:nth-child(4) {
+        transition: all 0.5s ease 0.7s;
+    }
+    .nav-links li:nth-child(5) {
+        transition: all 0.5s ease 0.8s;
+    }
+    .nav-links li:nth-child(6) {
+        transition: all 0.5s ease 0.9s;
+        margin: 0;
+    }
+    .nav-links li:nth-child(7) {
+        transition: all 0.5s ease 1s;
+        margin: 0;
+    }
+    li.fade {
+        opacity: 1;
+    }
+
+    .bases-grid {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+
+    #bases h2, #bases p {
+        font-size: 1.25rem; /* Tamaño de letra reducido en pantallas pequeñas */
+    }
+
+    .base-item h3 {
+        font-size: 1.5rem; /* Tamaño del título reducido */
+    }
+
+    .base-item p {
+        font-size: 1rem; /* Tamaño del texto reducido */
+    }
+
+    .bases-image img {
+        width: 100%; /* Ancho total en pantallas pequeñas */
+        height: auto; /* Altura automática */
+    }
+
+    #bases {
+        padding-top: 6%; /* Aumentar espacio superior en pantallas pequeñas */
+    }
+
+    #descripcion {
+        padding-top: 4rem; /* Aumentar espacio superior en pantallas pequeñas */
+    }
+
+    .carousel .list .item .content {
+        top: 50%;
+        left: 38%;
+    }
+
+    .cta-button {
+        font-size: 1.2rem; /* Tamaño de texto reducido */
+        padding: 12px 25px;
+    }
+
+    #mapa
+    {
+        width: 90%;
+    }
+
+    #ubicacion{
+        padding-bottom: 2rem;
+    }
+}
+
+/* Para pantallas menores a 700px */
+@media screen and (max-width: 700px) {
+    nav {
+        position: fixed;
+        z-index: 3;
+    }
+    .hamburger {
+        display: block;
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        z-index: 2;
+        transition: all 0.7s ease;
+    }
+    .nav-links {
+        position: fixed;
+        background: #131418;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        clip-path: circle(50px at 90% -20%);
+        -webkit-clip-path: circle(50px at 90% -10%);
+        transition: all 1s ease-out;
+        pointer-events: none;
+    }
+    .nav-links.open {
+        clip-path: circle(1000px at 90% -10%);
+        -webkit-clip-path: circle(1000px at 90% -10%);
+        pointer-events: all;
+    }
+    .nav-links li {
+        opacity: 0;
+    }
+    .nav-links li:nth-child(1) {
+        transition: all 0.5s ease 0.2s;
+    }
+    .nav-links li:nth-child(2) {
+        transition: all 0.5s ease 0.4s;
+    }
+    .nav-links li:nth-child(3) {
+        transition: all 0.5s ease 0.6s;
+    }
+    .nav-links li:nth-child(4) {
+        transition: all 0.5s ease 0.7s;
+    }
+    .nav-links li:nth-child(5) {
+        transition: all 0.5s ease 0.8s;
+    }
+    .nav-links li:nth-child(6) {
+        transition: all 0.5s ease 0.9s;
+        margin: 0;
+    }
+    .nav-links li:nth-child(7) {
+        transition: all 0.5s ease 1s;
+        margin: 0;
+    }
+    li.fade {
+        opacity: 1;
+    }
+
+    .bases-grid {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+
+    #bases h2, #bases p {
+        font-size: 1.25rem; /* Tamaño de letra reducido en pantallas pequeñas */
+    }
+
+    .base-item h3 {
+        font-size: 1.5rem; /* Tamaño del título reducido */
+    }
+
+    .base-item p {
+        font-size: 1rem; /* Tamaño del texto reducido */
+    }
+
+    .bases-image img {
+        width: 100%; /* Ancho total en pantallas pequeñas */
+        height: auto; /* Altura automática */
+    }
+
+    #bases {
+        padding-top: 6rem; /* Aumentar espacio superior en pantallas pequeñas */
+    }
+
+    #descripcion {
+        padding-top: 6rem; /* Aumentar espacio superior en pantallas pequeñas */
+    }
+
+    .cta-button {
+        font-size: 1.2rem; /* Tamaño de texto reducido */
+        padding: 12px 25px;
+    }
+
+    #mapa
+    {
+        width: 90%;
+    }
+
+}
+
+/* Para pantallas menores a 600px */
+@media screen and (max-width: 600px) {
+
+    .nav-links{
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        font-size: 1rem; /* Tamaño de texto reducido aún más */
+        padding: 10px 20px;
+    }
+
+    .base-item {
+        padding: 10px; /* Reducir el espacio interno en pantallas muy pequeñas */
+    }
+
+    .base-item h3 {
+        font-size: 1.25rem; /* Tamaño del título aún más reducido */
+    }
+
+    .base-item p {
+        font-size: 0.875rem; /* Tamaño del texto aún más reducido */
+    }
+
+    #bases h2 {
+        font-size: 1.25rem; /* Tamaño de letra del título reducido */
+    }
+
+    #bases p {
+        font-size: 1rem; /* Tamaño de letra del párrafo reducido */
+    }
+
+    .bases-image img {
+        width: 100%; /* Ancho total en pantallas muy pequeñas */
+        height: auto; /* Altura automática */
+    }
+
+    #bases {
+        padding-top: 2rem; /* Aumentar espacio superior en pantallas muy pequeñas */
+        padding-bottom: 0rem; /* Aumentar espacio superior en pantallas muy pequeñas */
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+
+    .product-card {
+        max-width: 100%; /* Ancho máximo de las tarjetas en pantallas pequeñas */
+    }
+
+    #descripcion {
+        padding-top: 1.5rem; /* Aumentar espacio superior en pantallas pequeñas */
+    }
+
+    .carousel .list .item .content {
+        position: absolute;
+        top: 30%;
+        }
+
+    #mapa
+    {
+        width: 90%;
+    }
+
+    #ubicacion{
+        padding-bottom: 4rem;
+    }
+
+    #contacto{
+        padding-bottom: 1rem;
+    }
+
+    #footer{
+        padding-top: 1rem;
+    }
+}
+
+/* Para pantallas menores a 500px */
+@media screen and (max-width: 500px) {
+
+    .cta-button {
+        font-size: 1rem; /* Tamaño de texto reducido aún más */
+        padding: 10px 20px;
+    }
+
+    .base-item {
+        padding: 10px; /* Reducir el espacio interno en pantallas muy pequeñas */
+    }
+
+    .base-item h3 {
+        font-size: 1.25rem; /* Tamaño del título aún más reducido */
+    }
+
+    .base-item p {
+        font-size: 0.875rem; /* Tamaño del texto aún más reducido */
+    }
+
+    #bases h2 {
+        font-size: 1.25rem; /* Tamaño de letra del título reducido */
+    }
+
+    #bases p {
+        font-size: 1rem; /* Tamaño de letra del párrafo reducido */
+    }
+
+    .bases-image img {
+        width: 100%; /* Ancho total en pantallas muy pequeñas */
+        height: auto; /* Altura automática */
+    }
+
+    #bases {
+        padding-top: 2rem; /* Aumentar espacio superior en pantallas muy pequeñas */
+        padding-bottom: 0rem; /* Aumentar espacio superior en pantallas muy pequeñas */
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+
+    .product-card {
+        max-width: 100%; /* Ancho máximo de las tarjetas en pantallas pequeñas */
+    }
+
+    #descripcion {
+        padding-top: 1.5rem; /* Aumentar espacio superior en pantallas pequeñas */
+    }
+
+    .carousel .list .item .content {
+        position: absolute;
+        top: 30%;
+        }
+
+    #mapa
+    {
+        width: 90%;
+    }
+
+    #ubicacion{
+        padding-bottom: 4.5rem;
+    }
+
+    #contacto{
+        padding-bottom: 1rem;
+    }
+
+    #footer{
+        padding-top: 1rem;
+    }
+}
+
+
+/* Para pantallas menores a 400px */
+@media screen and (max-width: 400px) {
+
+    .cta-button {
+        font-size: 0.875rem; /* Tamaño de texto más pequeño */
+        padding: 8px 15px;
+    }
+
+    .base-item {
+        padding: 10px; /* Reducir el espacio interno en pantallas muy pequeñas */
+    }
+
+    .base-item h3 {
+        font-size: 1.25rem; /* Tamaño del título aún más reducido */
+    }
+
+    .base-item p {
+        font-size: 0.875rem; /* Tamaño del texto aún más reducido */
+    }
+
+    #bases h2 {
+        font-size: 1.25rem; /* Tamaño de letra del título reducido */
+    }
+
+    #bases p {
+        font-size: 1rem; /* Tamaño de letra del párrafo reducido */
+    }
+
+    .bases-image img {
+        width: 100%; /* Ancho total en pantallas muy pequeñas */
+        height: auto; /* Altura automática */
+    }
+
+    #bases {
+        padding-top: 4rem; /* Aumentar espacio superior en pantallas muy pequeñas */
+        padding-bottom: 3rem;
+    }
+
+    #descripcion {
+        padding-top: 2.5rem; /* Aumentar espacio superior en pantallas muy pequeñas */
+        padding-bottom: 0;
+    }
+
+    #ubicacion{
+        padding-top: 0;
+        padding-bottom: 2rem;
+    }
+
+    #contacto{
+        padding-top: 0rem;
+        padding-bottom: 2rem;
+    }
+
+    .carousel .list .item .content {
+    position: absolute;
+    top: 20%;
+    }
+
+    #mapa
+    {
+        width: 90%;
+    }
+    
+    .social{
+        padding-bottom: 1rem;
+    }
+
+}
+
+/* Para pantallas menores a 375px */
+@media screen and (max-width: 375px) {
+
+    .cta-button {
+        font-size: 0.875rem; /* Tamaño de texto más pequeño */
+        padding: 8px 15px;
+    }
+
+    .base-item {
+        padding: 10px; /* Reducir el espacio interno en pantallas muy pequeñas */
+    }
+
+    .base-item h3 {
+        font-size: 1.25rem; /* Tamaño del título aún más reducido */
+    }
+
+    .base-item p {
+        font-size: 0.875rem; /* Tamaño del texto aún más reducido */
+    }
+
+    #bases h2 {
+        font-size: 1.25rem; /* Tamaño de letra del título reducido */
+    }
+
+    #bases p {
+        font-size: 1rem; /* Tamaño de letra del párrafo reducido */
+    }
+
+    .bases-image img {
+        width: 100%; /* Ancho total en pantallas muy pequeñas */
+        height: auto; /* Altura automática */
+    }
+
+    #bases {
+        padding-top: 8rem; /* Aumentar espacio superior en pantallas muy pequeñas */
+        padding-bottom: 3rem;
+    }
+
+    #descripcion {
+        padding-top: 2.5rem; /* Aumentar espacio superior en pantallas muy pequeñas */
+        padding-bottom: 0;
+    }
+
+    #ubicacion{
+        padding-top: 0;
+        padding-bottom: 2rem;
+    }
+
+    #contacto{
+        padding-top: 0rem;
+        padding-bottom: 2rem;
+    }
+
+    .carousel .list .item .content {
+    position: absolute;
+    top: 20%;
+    }
+
+    #mapa
+    {
+        width: 90%;
+    }
+    
+    .social{
+        padding-bottom: 1rem;
+    }
+
+}
+
+/* Para pantallas menores a 678px */
+@media screen and (max-width: 678px) {
+    .carousel .list .item .content {
+        padding-right: 0;
+    }
+    .carousel .list .item .content .title {
+        font-size: 30px;
+    }
+}
+
+
+
+#ubicacion{
+    padding-top: 5rem;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    display: block;
+    height: fit-content;
+}
+
+
+
+
+#contacto{
+    height: 10vh;
+    padding-top: 2rem;
+    padding-bottom: 0rem;
+    display: block;
+}
+
+/* Estilo para los iconos sociales */
+.social {
+    margin: 0;
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.social .social-item {
+    margin: 0 30px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social .social-link {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    text-align: center;
+    transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(0, 0);
+    transition: all 0.4s ease;
+}
+
+.social .social-link svg {
+    width: 24px;
+    height: 24px;
+    transition: fill 0.4s ease;
+}
+
+/* Estilos específicos para cada icono */
+.social .social-link-facebook svg {
+    fill: #3b5999; /* Color inicial para Facebook */
+}
+
+.social .social-link-whatsapp svg {
+    fill: #25D366; /* Color inicial para WhatsApp */
+}
+
+.social .social-link-instagram svg {
+    fill: #e4405f; /* Color inicial para Instagram */
+}
+
+.social .social-link::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: -10px;
+    height: 100%;
+    width: 10px;
+    background: #b1b1b1;
+    transition: all 0.4s ease;
+    transform: rotate(0deg) skewY(-45deg);
+}
+
+.social .social-link::after {
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: -5px;
+    height: 10px;
+    width: 100%;
+    background: #b1b1b1;
+    transition: all 0.4s ease;
+    transform: rotate(0deg) skewX(-45deg);
+}
+
+.social .social-link:hover {
+    transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(5px, -5px);
+    box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5);
+    background: #fff;
+}
+
+/* Cambiar el color del icono al hacer hover */
+.social .social-link-facebook:hover svg path{
+    fill: #fff;
+    background: #3b5999;
+}
+
+.social .social-link-facebook:nth-child(1):hover{
+    background: #3b5999;
+}
+
+.social .social-link-facebook:hover::before,
+.social .social-link-facebook:hover::after {
+    background: #3b5999;
+}
+
+.social .social-link-whatsapp:hover svg path{
+    fill: #fff;
+    background: #25D366;
+}
+
+.social .social-link-whatsapp:nth-child(1):hover{
+    background: #25D366;
+}
+
+.social .social-link-whatsapp:hover::before,
+.social .social-link-whatsapp:hover::after {
+    background: #25D366;
+}
+
+.social .social-link-instagram:hover svg path{
+    fill: #fff;
+    background: #e4405f;
+}
+
+.social .social-link-instagram:nth-child(1):hover{
+    background: #e4405f;
+}
+
+.social .social-link-instagram:hover::before,
+.social .social-link-instagram:hover::after {
+    background: #e4405f;
+}
+
+#footer{
+    padding-top: 1rem;
+}
