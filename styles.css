@@ -937,6 +937,12 @@ header a {
     #ubicacion{
         padding-bottom: 2rem;
     }
+
+    .hero-section {
+        background-attachment: scroll; /* Ajustar el comportamiento de fondo en móviles */
+        background-position: center center;
+        background-size: cover;
+    }
 }
 
 /* Para pantallas menores a 700px */
