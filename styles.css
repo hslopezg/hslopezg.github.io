@@ -1,9 +1,24 @@
+@font-face {
+    font-family: 'Trajan Pro 3';
+    src: url('font/TrajanPro3Regular.ttf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Trajan Pro 3';
+    src: url('TrajanPro3Bold.ttf') format('opentype');
+    font-weight: bold;
+}
+
+.logo img {
+    width: auto;
+}
+
 /* Estilos generales */
 * {
     margin: 0;
     padding: 0;
     color: #f2f5f7;
-    font-family: 'Barlow Condensed', sans-serif; /* Aplicar la fuente Barlow Condensed */
+    font-family: 'Trajan Pro 3', sans-serif; /* Aplicar la fuente Trajan Pro 3 */
     letter-spacing: 1px;
     font-weight: 300;
 }
@@ -27,6 +42,7 @@ nav {
 
 /* Estilo para el logo */
 .logo {
+    font-family: 'Trajan Pro 3';
     padding: 1vh 1vw;
     text-align: center;
 }
@@ -35,6 +51,7 @@ nav {
     width: 5rem;
 }
 .logo span {
+    font-family: 'Trajan Pro 3';
     color: #ff414d; /* Mismo color que el botón */
 }
 
@@ -47,6 +64,7 @@ nav {
     justify-content: space-evenly;
     align-items: center;
     text-transform: uppercase;
+    font-size: 1rem;
 }
 .nav-links li a {
     text-decoration: none;
@@ -153,6 +171,7 @@ nav {
 }
 
 .hero-text h1 {
+    font-family: 'Trajan Pro 3';
     font-size: 3rem;
     line-height: 1.2;
     margin-bottom: 20px;
@@ -167,6 +186,7 @@ nav {
 }
 
 .cta-button {
+    font-family: 'Trajan Pro 3';
     display: inline-flex;
     align-items: center;
     padding: 15px 30px;
@@ -245,13 +265,6 @@ nav {
     margin-top: 20px; /* Espacio superior */
 }
 
-.bases-image img {
-    width: 50rem; /* Ancho especificado */
-    height: 17rem; /* Alto igual que las tarjetas */
-    object-fit: cover; /* Asegurar que la imagen cubra el área sin distorsión */
-    border-radius: 10px; /* Bordes redondeados */
-}
-
 /* Estilo para la sección de producto */
 #descripcion {
     background-color: black;
@@ -275,12 +288,11 @@ nav {
 }
 
 /* Estilos para el carrusel */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 body {
     margin: 0;
     background-color: #000;
     color: #eee;
-    font-family: Poppins;
+    font-family: 'Trajan Pro 3', sans-serif;
     font-size: 12px;
 }
 a {
@@ -332,11 +344,13 @@ header a {
     text-shadow: 0 5px 10px #0004;
 }
 .carousel .list .item .author {
+    font-family: 'Trajan Pro 3';
     font-weight: bold;
     letter-spacing: 10px;
 }
 .carousel .list .item .title,
 .carousel .list .item .topic {
+    font-family: 'Trajan Pro 3';
     font-size: 5em;
     font-weight: bold;
     line-height: 1.3em;
@@ -352,7 +366,7 @@ header a {
     border: none;
     background-color: #eee;
     letter-spacing: 3px;
-    font-family: Poppins, sans-serif;
+    font-family: 'Trajan Pro 3', sans-serif;
     font-weight: 500;
 }
 .carousel .list .item .buttons button:nth-child(2) {
@@ -567,7 +581,7 @@ header a {
     color: #ff414d;
     padding: 10px 20px;
     border-radius: 5px;
-    font-family: Poppins, sans-serif;
+    font-family: 'Trajan Pro 3', sans-serif;
     font-weight: 500;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -583,7 +597,7 @@ header a {
 /* Media Queries */
 
 /* Para pantallas menores a 1050px */
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 1050px) and (orientation: portrait){
     nav {
         position: fixed;
         z-index: 3;
@@ -661,11 +675,6 @@ header a {
         font-size: 1.5rem; /* Tamaño del texto reducido */
     }
 
-    .bases-image img {
-        width: 100%; /* Ancho total en pantallas pequeñas */
-        height: auto; /* Altura automática */
-    }
-
     #bases {
         padding-top: 4rem; /* Aumentar espacio superior en pantallas pequeñas */
     }
@@ -706,7 +715,7 @@ header a {
 }
 
 /* Para pantallas menores a 900px */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 900px) and (orientation: portrait){
     nav {
         position: fixed;
         z-index: 3;
@@ -727,15 +736,15 @@ header a {
         height: 100vh;
         width: 100%;
         flex-direction: column;
-        clip-path: circle(50px at 90% -20%);
-        -webkit-clip-path: circle(50px at 90% -10%);
+        clip-path: circle(50px at 90% - 20%);
+        -webkit-clip-path: circle(50px at 90% - 20%);
         transition: all 1s ease-out;
         pointer-events: none;
         font-size: 2rem;
     }
     .nav-links.open {
-        clip-path: circle(1100px at 90% -0.1%);
-        -webkit-clip-path: circle(1100px at 90% -0.1%);
+        clip-path: circle(1190px at 90% -0.1%);
+        -webkit-clip-path: circle(1190px at 90% -0.1%);
         pointer-events: all;
     }
     .nav-links li {
@@ -784,11 +793,6 @@ header a {
         font-size: 1rem; /* Tamaño del texto reducido */
     }
 
-    .bases-image img {
-        width: 100%; /* Ancho total en pantallas pequeñas */
-        height: auto; /* Altura automática */
-    }
-
     #bases {
         padding-top: 4rem; /* Aumentar espacio superior en pantallas pequeñas */
     }
@@ -829,7 +833,7 @@ header a {
 }
 
 /* Para pantallas menores a 800px */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 800px) and (orientation: portrait){
     nav {
         position: fixed;
         z-index: 3;
@@ -904,11 +908,6 @@ header a {
 
     .base-item p {
         font-size: 1rem; /* Tamaño del texto reducido */
-    }
-
-    .bases-image img {
-        width: 100%; /* Ancho total en pantallas pequeñas */
-        height: auto; /* Altura automática */
     }
 
     #bases {
@@ -1023,11 +1022,6 @@ header a {
         font-size: 1rem; /* Tamaño del texto reducido */
     }
 
-    .bases-image img {
-        width: 100%; /* Ancho total en pantallas pequeñas */
-        height: auto; /* Altura automática */
-    }
-
     #bases {
         padding-top: 6rem; /* Aumentar espacio superior en pantallas pequeñas */
     }
@@ -1049,7 +1043,7 @@ header a {
 }
 
 /* Para pantallas menores a 600px */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) and (orientation: portrait){
 
     .nav-links{
         font-size: 1rem;
@@ -1078,11 +1072,6 @@ header a {
 
     #bases p {
         font-size: 1rem; /* Tamaño de letra del párrafo reducido */
-    }
-
-    .bases-image img {
-        width: 100%; /* Ancho total en pantallas muy pequeñas */
-        height: auto; /* Altura automática */
     }
 
     #bases {
@@ -1126,7 +1115,7 @@ header a {
 }
 
 /* Para pantallas menores a 500px */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 500px) and (orientation: portrait){
 
     .cta-button {
         font-size: 1rem; /* Tamaño de texto reducido aún más */
@@ -1151,11 +1140,6 @@ header a {
 
     #bases p {
         font-size: 1rem; /* Tamaño de letra del párrafo reducido */
-    }
-
-    .bases-image img {
-        width: 100%; /* Ancho total en pantallas muy pequeñas */
-        height: auto; /* Altura automática */
     }
 
     #bases {
@@ -1200,7 +1184,7 @@ header a {
 
 
 /* Para pantallas menores a 400px */
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 400px) and (orientation: portrait){
 
     .cta-button {
         font-size: 0.875rem; /* Tamaño de texto más pequeño */
@@ -1225,11 +1209,6 @@ header a {
 
     #bases p {
         font-size: 1rem; /* Tamaño de letra del párrafo reducido */
-    }
-
-    .bases-image img {
-        width: 100%; /* Ancho total en pantallas muy pequeñas */
-        height: auto; /* Altura automática */
     }
 
     #bases {
@@ -1269,7 +1248,7 @@ header a {
 }
 
 /* Para pantallas menores a 375px */
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 375px) and (orientation: portrait){
 
     .cta-button {
         font-size: 0.875rem; /* Tamaño de texto más pequeño */
@@ -1296,18 +1275,13 @@ header a {
         font-size: 1rem; /* Tamaño de letra del párrafo reducido */
     }
 
-    .bases-image img {
-        width: 100%; /* Ancho total en pantallas muy pequeñas */
-        height: auto; /* Altura automática */
-    }
-
     #bases {
         padding-top: 8rem; /* Aumentar espacio superior en pantallas muy pequeñas */
         padding-bottom: 3rem;
     }
 
     #descripcion {
-        padding-top: 2.5rem; /* Aumentar espacio superior en pantallas muy pequeñas */
+        padding-top: 1.5rem; /* Aumentar espacio superior en pantallas muy pequeñas */
         padding-bottom: 0;
     }
 
@@ -1338,7 +1312,7 @@ header a {
 }
 
 /* Para pantallas menores a 678px */
-@media screen and (max-width: 678px) {
+@media screen and (max-width: 678px) and (orientation: portrait){
     .carousel .list .item .content {
         padding-right: 0;
     }
@@ -1496,4 +1470,769 @@ header a {
 
 #footer{
     padding-top: 1rem;
+}
+
+
+
+
+/* Para pantallas menores a 1370px en modo horizontal */
+@media screen and (max-width: 1370px) and (orientation: landscape) {
+
+    .nav-links {
+        font-size: 1rem;
+    }
+
+    .bases-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #bases h2, #bases p {
+        font-size: 1.75rem;
+    }
+
+    .base-item h3 {
+        font-size: 1.5rem;
+    }
+
+    .base-item p {
+        font-size: 1rem;
+    }
+
+    #bases {
+        padding-top: 14rem;
+    }
+
+    #descripcion {
+        padding-top: 1.5rem;
+        padding-bottom: 0rem;
+    }
+
+    .carousel .list .item .content {
+        position: absolute;
+        top: 60%;
+        left: 44%;
+        font-size: 0.5rem;
+    }
+
+    .cta-button {
+        font-size: 1.2rem;
+        padding: 12px 25px;
+    }
+
+    #mapa {
+        width: 90%;
+        max-height: 80%;
+    }
+
+    #ubicacion {
+        padding-top: 4rem;
+        padding-bottom: 0rem;
+        font-size: 1.5rem;
+    }
+
+    #contacto {
+        font-size: 1.5rem;
+    }
+}
+
+/* Para pantallas menores a 1280px en modo horizontal */
+@media screen and (max-width: 1280px) and (orientation: landscape) {
+
+    .nav-links {
+        font-size: 1rem;
+    }
+
+    .bases-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #bases h2, #bases p {
+        font-size: 1.75rem;
+    }
+
+    .base-item h3 {
+        font-size: 1.5rem;
+    }
+
+    .base-item p {
+        font-size: 1rem;
+    }
+
+    #bases {
+        padding-top: 14rem;
+    }
+
+    #descripcion {
+        padding-top: 1.5rem;
+        padding-bottom: 0rem;
+    }
+
+    .carousel .list .item .content {
+        position: absolute;
+        top: 60%;
+        left: 43%;
+        font-size: 0.5rem;
+    }
+
+    .cta-button {
+        font-size: 1.2rem;
+        padding: 12px 25px;
+    }
+
+    #mapa {
+        width: 90%;
+        max-height: 80%;
+    }
+
+    #ubicacion {
+        padding-top: 4rem;
+        padding-bottom: 0rem;
+        font-size: 1.5rem;
+    }
+
+    #contacto {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+/* Para pantallas menores a 1180px en modo horizontal */
+@media screen and (max-width: 1180px) and (orientation: landscape) {
+
+    .nav-links {
+        font-size: 1rem;
+    }
+
+    .bases-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #bases h2, #bases p {
+        font-size: 1.75rem;
+    }
+
+    .base-item h3 {
+        font-size: 1.5rem;
+    }
+
+    .base-item p {
+        font-size: 1rem;
+    }
+
+    #bases {
+        padding-top: 14rem;
+    }
+
+    #descripcion {
+        padding-top: 1.5rem;
+        padding-bottom: 0rem;
+    }
+
+    .carousel .list .item .content {
+        position: absolute;
+        top: 50%;
+        left: 41.5%;
+        font-size: 0.5rem;
+    }
+
+    .cta-button {
+        font-size: 1.2rem;
+        padding: 12px 25px;
+    }
+
+    #mapa {
+        width: 90%;
+        max-height: 80%;
+    }
+
+    #ubicacion {
+        padding-top: 4rem;
+        padding-bottom: 0rem;
+        font-size: 1.5rem;
+    }
+
+    #contacto {
+        font-size: 1.5rem;
+    }
+}
+
+
+/* Para pantallas menores a 1050px en modo horizontal */
+@media screen and (max-width: 1050px) and (orientation: landscape) {
+
+    .nav-links {
+        font-size: 1rem;
+    }
+
+    .bases-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #bases h2, #bases p {
+        font-size: 1.75rem;
+    }
+
+    .base-item h3 {
+        font-size: 1.5rem;
+    }
+
+    .base-item p {
+        font-size: 1rem;
+    }
+
+    #bases {
+        padding-top: 14rem;
+    }
+
+    #descripcion {
+        padding-top: 1.5rem;
+        padding-bottom: 0rem;
+    }
+
+    .carousel .list .item .content {
+        position: absolute;
+        top: 50%;
+        left: 38%;
+        font-size: 0.5rem;
+    }
+
+    .cta-button {
+        font-size: 1.2rem;
+        padding: 12px 25px;
+    }
+
+    #mapa {
+        width: 90%;
+        max-height: 80%;
+    }
+
+    #ubicacion {
+        padding-top: 4rem;
+        padding-bottom: 0rem;
+        font-size: 1.5rem;
+    }
+
+    #contacto {
+        font-size: 1.5rem;
+    }
+}
+
+/* Para pantallas menores a 950px en modo horizontal */
+@media screen and (max-width: 950px) and (orientation: landscape) {
+
+    #bases {
+        padding-top: 22rem;
+        padding-bottom: 16rem;
+    }
+}
+
+/* Para pantallas menores a 914px en modo horizontal */
+@media screen and (max-width: 914px) and (orientation: landscape) {
+
+    #bases {
+        padding-top: 22rem;
+    }
+
+    .carousel .list .item .content {
+        position: absolute;
+        top: 25%;
+        left: 37%;
+        font-size: 0.5rem;
+    }
+}
+
+/* Para pantallas menores a 900px en modo horizontal */
+@media screen and (max-width: 900px) and (orientation: landscape) {
+
+    .nav-links {
+        font-size: 1rem;
+    }
+
+    .bases-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #bases h2, #bases p {
+        font-size: 1.75rem;
+    }
+
+    .base-item h3 {
+        font-size: 1.5rem;
+    }
+
+    .base-item p {
+        font-size: 1rem;
+    }
+
+    #bases {
+        padding-top: 24rem;
+        padding-bottom: 16rem;
+    }
+
+    #descripcion {
+        padding-top: 1.5rem;
+        padding-bottom: 0rem;
+    }
+
+    .carousel .list .item .content {
+        position: absolute;
+        top: 25%;
+        left: 37%;
+        font-size: 0.5rem;
+    }
+
+    .cta-button {
+        font-size: 1.2rem;
+        padding: 12px 25px;
+    }
+
+    #mapa {
+        width: 90%;
+        max-height: 80%;
+    }
+
+    #ubicacion {
+        padding-top: 4rem;
+        padding-bottom: 0rem;
+        font-size: 1.5rem;
+    }
+
+    #contacto {
+        font-size: 1.5rem;
+    }
+}
+
+/* Para pantallas menores a 800px en modo horizontal */
+@media screen and (max-width: 800px) and (orientation: landscape) {
+    
+    .nav-links {
+        font-size: 1rem;
+    }
+
+    body {
+        overflow-x: hidden; /* Asegurar que no haya desbordamiento horizontal */
+    }
+
+    .bases-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #bases h2, #bases p {
+        font-size: 1.25rem;
+    }
+
+    .base-item h3 {
+        font-size: 1.5rem;
+    }
+
+    .base-item p {
+        font-size: 1rem;
+    }
+
+    #bases {
+        padding-top: 26rem;
+    }
+
+    #descripcion {
+        padding-top: 3rem;
+    }
+
+    .cta-button {
+        font-size: 1.2rem;
+        padding: 12px 25px;
+    }
+
+    .carousel .list .item .content {
+        top: 30%;
+        left: 39%;
+    }
+
+    #mapa {
+        width: 90%;
+    }
+
+    #ubicacion {
+        padding-bottom: 2rem;
+    }
+
+    .hero-section {
+        background-attachment: scroll;
+        background-position: center center;
+        background-size: cover;
+    }
+}
+
+/* Para pantallas menores a 700px en modo horizontal */
+@media screen and (max-width: 700px) and (orientation: landscape) {
+
+    .nav-links {
+        display: flex !important;
+        flex-direction: row;
+        position: static;
+        background: none;
+        height: auto;
+        clip-path: none;
+        -webkit-clip-path: none;
+        pointer-events: all;
+        font-size: 1rem;
+    }
+    .hamburger {
+        display: none;
+    }
+    .nav-links li {
+        opacity: 1;
+        transition: none;
+    }
+
+    .bases-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #bases h2, #bases p {
+        font-size: 1.25rem;
+    }
+
+    .base-item h3 {
+        font-size: 1.5rem;
+    }
+
+    .base-item p {
+        font-size: 1rem;
+    }
+
+    #bases {
+        padding-top: 24rem;
+    }
+
+    #descripcion {
+        padding-top: 3rem;
+    }
+
+    .carousel .list .item .content {
+        position: absolute;
+        top: 20%;
+        left: 25%;
+    }
+
+    .cta-button {
+        font-size: 1.2rem;
+        padding: 12px 25px;
+    }
+
+    #mapa {
+        width: 90%;
+    }
+}
+
+/* Para pantallas menores a 600px en modo horizontal */
+@media screen and (max-width: 600px) and (orientation: landscape) {
+
+    .cta-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .base-item {
+        padding: 10px;
+    }
+
+    .base-item h3 {
+        font-size: 1.25rem;
+    }
+
+    .base-item p {
+        font-size: 0.875rem;
+    }
+
+    #bases h2 {
+        font-size: 1.25rem;
+    }
+
+    #bases p {
+        font-size: 1rem;
+    }
+
+    .base-item p {
+        font-size: 1rem;
+    }
+
+    #bases {
+        padding-top: 24rem;
+    }
+
+    #descripcion {
+        padding-top: 3rem;
+    }
+
+    .carousel .list .item .content {
+        position: absolute;
+        top: 20%;
+        left: 25%;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-card {
+        max-width: 100%;
+    }
+
+    #descripcion {
+        padding-top: 1.5rem;
+    }
+
+    #mapa {
+        width: 90%;
+    }
+
+    #ubicacion {
+        padding-bottom: 4rem;
+    }
+
+    #contacto {
+        padding-bottom: 1rem;
+    }
+
+    #footer {
+        padding-top: 1rem;
+    }
+}
+
+/* Para pantallas menores a 500px en modo horizontal */
+@media screen and (max-width: 500px) and (orientation: landscape) {
+    .nav-links {
+        display: flex !important;
+        flex-direction: row;
+        position: static;
+        background: none;
+        height: auto;
+        clip-path: none;
+        -webkit-clip-path: none;
+        pointer-events: all;
+        font-size: 1rem;
+    }
+    .hamburger {
+        display: none;
+    }
+    .nav-links li {
+        opacity: 1;
+        transition: none;
+    }
+
+    .cta-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .base-item {
+        padding: 10px;
+    }
+
+    .base-item h3 {
+        font-size: 1.25rem;
+    }
+
+    .base-item p {
+        font-size: 0.875rem;
+    }
+
+    #bases h2 {
+        font-size: 1.25rem;
+    }
+
+    #bases p {
+        font-size: 1rem;
+    }
+
+    #bases {
+        padding-top: 2rem;
+        padding-bottom: 0rem;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-card {
+        max-width: 100%;
+    }
+
+    #descripcion {
+        padding-top: 1.5rem;
+    }
+
+    .carousel .list .item .content {
+        position: absolute;
+        top: 30%;
+    }
+
+    #mapa {
+        width: 90%;
+    }
+
+    #ubicacion {
+        padding-bottom: 4.5rem;
+    }
+
+    #contacto {
+        padding-bottom: 1rem;
+    }
+
+    #footer {
+        padding-top: 1rem;
+    }
+}
+
+/* Para pantallas menores a 400px en modo horizontal */
+@media screen and (max-width: 400px) and (orientation: landscape) {
+
+    .cta-button {
+        font-size: 0.875rem;
+        padding: 8px 15px;
+    }
+
+    .base-item {
+        padding: 10px;
+    }
+
+    .base-item h3 {
+        font-size: 1.25rem;
+    }
+
+    .base-item p {
+        font-size: 0.875rem;
+    }
+
+    #bases h2 {
+        font-size: 1.25rem;
+    }
+
+    #bases p {
+        font-size: 1rem;
+    }
+
+    #bases {
+        padding-top: 4rem;
+        padding-bottom: 3rem;
+    }
+
+    #descripcion {
+        padding-top: 2.5rem;
+        padding-bottom: 0;
+    }
+
+    #ubicacion {
+        padding-top: 0;
+        padding-bottom: 2rem;
+    }
+
+    #contacto {
+        padding-top: 0rem;
+        padding-bottom: 2rem;
+    }
+
+    .carousel .list .item .content {
+        position: absolute;
+        top: 20%;
+    }
+
+    #mapa {
+        width: 90%;
+    }
+
+    .social {
+        padding-bottom: 1rem;
+    }
+}
+
+/* Para pantallas menores a 375px en modo horizontal */
+@media screen and (max-width: 375px) and (orientation: landscape) {
+    .nav-links {
+        display: flex !important;
+        flex-direction: row;
+        position: static;
+        background: none;
+        height: auto;
+        clip-path: none;
+        -webkit-clip-path: none;
+        pointer-events: all;
+        font-size: 1rem;
+    }
+    .hamburger {
+        display: none;
+    }
+    .nav-links li {
+        opacity: 1;
+        transition: none;
+    }
+
+    .cta-button {
+        font-size: 0.875rem;
+        padding: 8px 15px;
+    }
+
+    .base-item {
+        padding: 10px;
+    }
+
+    .base-item h3 {
+        font-size: 1.25rem;
+    }
+
+    .base-item p {
+        font-size: 0.875rem;
+    }
+
+    #bases h2 {
+        font-size: 1.25rem;
+    }
+
+    #bases p {
+        font-size: 1rem;
+    }
+
+    #bases {
+        padding-top: 8rem;
+        padding-bottom: 3rem;
+    }
+
+    #descripcion {
+        padding-top: 2.5rem;
+        padding-bottom: 0;
+    }
+
+    #ubicacion {
+        padding-top: 0;
+        padding-bottom: 2rem;
+    }
+
+    #contacto {
+        padding-top: 0rem;
+        padding-bottom: 2rem;
+    }
+
+    .carousel .list .item .content {
+        position: absolute;
+        top: 20%;
+    }
+
+    #mapa {
+        width: 90%;
+    }
+
+    .social {
+        padding-bottom: 1rem;
+    }
+}
+
+/* Para pantallas menores a 678px en modo horizontal */
+@media screen and (max-width: 678px) and (orientation: landscape) {
+    .carousel .list .item .content {
+        padding-right: 0;
+    }
+    .carousel .list .item .content .title {
+        font-size: 30px;
+    }
 }
